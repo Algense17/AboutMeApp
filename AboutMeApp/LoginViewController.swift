@@ -29,9 +29,10 @@ final class LoginViewController: UIViewController {
         guard userNameTextField.text == currentLogin, passwordTextField.text == currentPassword else {
             showAlert(
                 withTitle: "invalid login or password",
-                andMessage: "Please, enter correct you login and password"
+                andMessage: "Please, enter correct you login and password",
+                clearPassword: true
             )
-            passwordTextField.text = ""
+            
             return false
         }
         return true
@@ -46,20 +47,25 @@ final class LoginViewController: UIViewController {
     @IBAction private func forgotUserButtonAction() {
         showAlert(
             withTitle: "Whooops",
-            andMessage: "Your name is user"
+            andMessage: "Your name is \(currentLogin)",
+            clearPassword: false
         )
     }
     
     @IBAction private func forgotPassButtonAction() {
         showAlert(
             withTitle: "Whooops",
-            andMessage: "Your password is secret"
+            andMessage: "Your password is \(currentPassword)",
+            clearPassword: false
         )
     }
     
-    private func showAlert(withTitle title: String, andMessage message: String) {
+    private func showAlert(withTitle title: String, andMessage message: String, clearPassword: Bool) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
+        let okAction = UIAlertAction(title: "Ok", style: .default) {_ in
+            if clearPassword {
+                self.passwordTextField.text = "" }
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }

@@ -13,7 +13,6 @@ final class WelcomeViewController: UIViewController {
     
     var username: String!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
