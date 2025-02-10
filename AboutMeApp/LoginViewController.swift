@@ -9,8 +9,8 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    @IBOutlet var userNameTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet private var userNameTextField: UITextField!
+    @IBOutlet private var passwordTextField: UITextField!
     
     private let currentLogin = "1"
     private let currentPassword = "1"
@@ -38,19 +38,19 @@ final class LoginViewController: UIViewController {
     }
 
     
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
+    @IBAction private func unwind(for segue: UIStoryboardSegue) {
         userNameTextField.text = ""
         passwordTextField.text = ""
     }
     
-    @IBAction func forgotUserButtonAction() {
+    @IBAction private func forgotUserButtonAction() {
         showAlert(
             withTitle: "Whooops",
             andMessage: "Your name is user"
         )
     }
     
-    @IBAction func forgotPassButtonAction() {
+    @IBAction private func forgotPassButtonAction() {
         showAlert(
             withTitle: "Whooops",
             andMessage: "Your password is secret"

@@ -9,7 +9,7 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
     
-    @IBOutlet var welcomeLabel: UILabel!
+    @IBOutlet private var welcomeLabel: UILabel!
     
     var username: String!
     
