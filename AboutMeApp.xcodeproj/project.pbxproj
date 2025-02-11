@@ -17,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF8E3D212D590D08007AB7DD /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF8E3D392D590D37007AB7DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF8E3D3A2D590D37007AB7DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF8E3D3B2D590D37007AB7DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -26,6 +25,7 @@
 		FF8E3D402D590D37007AB7DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FF8E3D412D590D37007AB7DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FF8E3D4A2D590EFE007AB7DD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FF8E3D6A2D5B757C007AB7DD /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AboutMeApp.app; path = "/Users/vasiliy/Desktop/SwiftBookLessons/Part 2/Lesson 2.06/AboutMeApp/build/Debug-iphoneos/AboutMeApp.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,31 +43,54 @@
 			isa = PBXGroup;
 			children = (
 				FF8E3D422D590D37007AB7DD /* AboutMeApp */,
-				FF8E3D222D590D08007AB7DD /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		FF8E3D222D590D08007AB7DD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FF8E3D212D590D08007AB7DD /* AboutMeApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		FF8E3D422D590D37007AB7DD /* AboutMeApp */ = {
 			isa = PBXGroup;
 			children = (
+				FF8E3D662D5B7447007AB7DD /* ViewControllers */,
+				FF8E3D692D5B7494007AB7DD /* Models */,
+				FF8E3D642D5B7410007AB7DD /* SupportingFiles */,
+				FF8E3D652D5B7427007AB7DD /* Storyboards */,
+				FF8E3D3A2D590D37007AB7DD /* Assets.xcassets */,
+			);
+			path = AboutMeApp;
+			sourceTree = "<group>";
+		};
+		FF8E3D642D5B7410007AB7DD /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				FF8E3D392D590D37007AB7DD /* AppDelegate.swift */,
 				FF8E3D402D590D37007AB7DD /* SceneDelegate.swift */,
-				FF8E3D412D590D37007AB7DD /* LoginViewController.swift */,
-				FF8E3D4A2D590EFE007AB7DD /* WelcomeViewController.swift */,
-				FF8E3D3A2D590D37007AB7DD /* Assets.xcassets */,
 				FF8E3D3B2D590D37007AB7DD /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FF8E3D652D5B7427007AB7DD /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
 				FF8E3D3D2D590D37007AB7DD /* LaunchScreen.storyboard */,
 				FF8E3D3F2D590D37007AB7DD /* Main.storyboard */,
 			);
-			path = AboutMeApp;
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FF8E3D662D5B7447007AB7DD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF8E3D412D590D37007AB7DD /* LoginViewController.swift */,
+				FF8E3D4A2D590EFE007AB7DD /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FF8E3D692D5B7494007AB7DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,7 +112,7 @@
 			packageProductDependencies = (
 			);
 			productName = AboutMeApp;
-			productReference = FF8E3D212D590D08007AB7DD /* AboutMeApp.app */;
+			productReference = FF8E3D6A2D5B757C007AB7DD /* AboutMeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +140,7 @@
 			mainGroup = FF8E3D182D590D08007AB7DD;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = FF8E3D222D590D08007AB7DD /* Products */;
+			productRefGroup = FF8E3D182D590D08007AB7DD;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -181,7 +204,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AboutMeApp/Info.plist;
+				INFOPLIST_FILE = AboutMeApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -213,7 +236,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AboutMeApp/Info.plist;
+				INFOPLIST_FILE = AboutMeApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

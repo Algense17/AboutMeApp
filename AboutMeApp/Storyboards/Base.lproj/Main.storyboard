@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8pR-pe-mWo">
-                                <rect key="frame" x="25" y="237" width="325" height="193.5"/>
+                                <rect key="frame" x="25" y="205" width="325" height="193.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKv-4z-lJn">
                                         <rect key="frame" x="0.0" y="0.0" width="325" height="34"/>
@@ -72,7 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
-                            <constraint firstItem="8pR-pe-mWo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ARc-9h-GSA"/>
+                            <constraint firstItem="8pR-pe-mWo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-32" id="ARc-9h-GSA"/>
                             <constraint firstItem="8pR-pe-mWo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MAy-CS-YYg"/>
                             <constraint firstItem="8pR-pe-mWo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="QWZ-a4-mO0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8pR-pe-mWo" secondAttribute="trailing" constant="25" id="x8l-dS-5VO"/>

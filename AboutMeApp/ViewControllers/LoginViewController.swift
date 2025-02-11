@@ -62,7 +62,7 @@ final class LoginViewController: UIViewController {
     
     private func showAlert(withTitle title: String, andMessage message: String, clearPassword: Bool) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default) {_ in
+        let okAction = UIAlertAction(title: "Ok", style: .default) {_ in 
             if clearPassword {
                 self.passwordTextField.text = "" }
         }
