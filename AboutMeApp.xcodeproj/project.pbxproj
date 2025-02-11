@@ -14,6 +14,8 @@
 		FF8E3D482D590D37007AB7DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8E3D3D2D590D37007AB7DD /* LaunchScreen.storyboard */; };
 		FF8E3D492D590D37007AB7DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF8E3D3F2D590D37007AB7DD /* Main.storyboard */; };
 		FF8E3D4B2D590EFE007AB7DD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8E3D4A2D590EFE007AB7DD /* WelcomeViewController.swift */; };
+		FF8E3D6D2D5BC407007AB7DD /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8E3D6C2D5BC407007AB7DD /* BioViewController.swift */; };
+		FF8E3D6F2D5BCF78007AB7DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8E3D6E2D5BCF77007AB7DD /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,9 @@
 		FF8E3D402D590D37007AB7DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FF8E3D412D590D37007AB7DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FF8E3D4A2D590EFE007AB7DD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		FF8E3D6A2D5B757C007AB7DD /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AboutMeApp.app; path = "/Users/vasiliy/Desktop/SwiftBookLessons/Part 2/Lesson 2.06/AboutMeApp/build/Debug-iphoneos/AboutMeApp.app"; sourceTree = "<absolute>"; };
+		FF8E3D6B2D5B8D3D007AB7DD /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8E3D6C2D5BC407007AB7DD /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		FF8E3D6E2D5BCF77007AB7DD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = AboutMeApp/User.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				FF8E3D422D590D37007AB7DD /* AboutMeApp */,
+				FF8E3D6B2D5B8D3D007AB7DD /* AboutMeApp.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +87,7 @@
 			children = (
 				FF8E3D412D590D37007AB7DD /* LoginViewController.swift */,
 				FF8E3D4A2D590EFE007AB7DD /* WelcomeViewController.swift */,
+				FF8E3D6C2D5BC407007AB7DD /* BioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -89,6 +95,7 @@
 		FF8E3D692D5B7494007AB7DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FF8E3D6E2D5BCF77007AB7DD /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,7 +119,7 @@
 			packageProductDependencies = (
 			);
 			productName = AboutMeApp;
-			productReference = FF8E3D6A2D5B757C007AB7DD /* AboutMeApp.app */;
+			productReference = FF8E3D6B2D5B8D3D007AB7DD /* AboutMeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -169,8 +176,10 @@
 			files = (
 				FF8E3D4B2D590EFE007AB7DD /* WelcomeViewController.swift in Sources */,
 				FF8E3D432D590D37007AB7DD /* AppDelegate.swift in Sources */,
+				FF8E3D6F2D5BCF78007AB7DD /* User.swift in Sources */,
 				FF8E3D442D590D37007AB7DD /* SceneDelegate.swift in Sources */,
 				FF8E3D452D590D37007AB7DD /* LoginViewController.swift in Sources */,
+				FF8E3D6D2D5BC407007AB7DD /* BioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

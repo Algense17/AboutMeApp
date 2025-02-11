@@ -38,7 +38,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Logi n"/>
                                         <connections>
-                                            <segue destination="Oai-ki-6i7" kind="presentation" modalPresentationStyle="fullScreen" id="FTm-pg-h96"/>
+                                            <segue destination="jPx-00-rf3" kind="presentation" modalPresentationStyle="fullScreen" id="FTm-pg-h96"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1eZ-Pq-dBu">
@@ -87,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="131" y="-27"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Home-->
         <scene sceneID="hlx-S7-Q1N">
             <objects>
                 <viewController id="Oai-ki-6i7" customClass="WelcomeViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,12 +117,13 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QKn-Qs-DaL"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
                             <constraint firstItem="tO3-Fl-4nj" firstAttribute="centerX" secondItem="eSU-2y-LHK" secondAttribute="centerX" id="QqN-G0-VyT"/>
                             <constraint firstItem="tO3-Fl-4nj" firstAttribute="centerY" secondItem="eSU-2y-LHK" secondAttribute="centerY" id="Y3S-jH-EMi"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="qHH-gl-eXu"/>
                     <navigationItem key="navigationItem" id="H3I-YO-rY7"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="x5L-XS-evs" id="GrM-Vg-nf5"/>
@@ -131,10 +132,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hl1-9M-E6S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="FFj-Kn-F69" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="831" y="-27"/>
+            <point key="canvasLocation" x="1768.8" y="-27.436281859070466"/>
+        </scene>
+        <!--Bio-->
+        <scene sceneID="6mK-us-Fkb">
+            <objects>
+                <viewController id="TEc-Ac-gfI" customClass="BioViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9p0-2X-Q2p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gkE-Xh-6fe"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bio" image="figure" catalog="system" id="sCJ-fS-qo4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cl6-vU-yD0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="744"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2Eh-9t-0wd">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jPx-00-rf3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Ng-LM-0Uw">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Oai-ki-6i7" kind="relationship" relationship="viewControllers" id="gXe-eD-Yuc"/>
+                        <segue destination="TEc-Ac-gfI" kind="relationship" relationship="viewControllers" id="2ps-Sy-9DY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXW-YN-50p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829.60000000000002" y="-27.436281859070466"/>
         </scene>
     </scenes>
     <resources>
+        <image name="figure" catalog="system" width="117" height="128"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -144,8 +181,8 @@
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
