@@ -12,8 +12,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet private var userNameTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
     
-    private let currentLogin = "1"
-    private let currentPassword = "1"
+    private let currentLogin = "User"
+    private let currentPassword = "Password"
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let settingVC = segue.destination as? WelcomeViewController
@@ -29,9 +29,9 @@ final class LoginViewController: UIViewController {
         guard userNameTextField.text == currentLogin, passwordTextField.text == currentPassword else {
             showAlert(
                 withTitle: "invalid login or password",
-                andMessage: "Please, enter correct you login and password",
-                clearPassword: true
-            )
+                andMessage: "Please, enter correct you login and password") {
+                    self.passwordTextField.text = ""
+                }
             
             return false
         }
@@ -44,27 +44,17 @@ final class LoginViewController: UIViewController {
         passwordTextField.text = ""
     }
     
-    @IBAction private func forgotUserButtonAction() {
-        showAlert(
-            withTitle: "Whooops",
-            andMessage: "Your name is \(currentLogin)",
-            clearPassword: false
-        )
+    @IBAction func forgotDataButtonsAction(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(withTitle: "Whoops", andMessage: "Your login is \(currentLogin)")
+        : showAlert(withTitle: "Whoops", andMessage: "Your password is \(currentPassword)")
     }
     
-    @IBAction private func forgotPassButtonAction() {
-        showAlert(
-            withTitle: "Whooops",
-            andMessage: "Your password is \(currentPassword)",
-            clearPassword: false
-        )
-    }
     
-    private func showAlert(withTitle title: String, andMessage message: String, clearPassword: Bool) {
+    private func showAlert(withTitle title: String, andMessage message: String, handler: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) {_ in 
-            if clearPassword {
-                self.passwordTextField.text = "" }
+            handler?()
         }
         alert.addAction(okAction)
         present(alert, animated: true)
