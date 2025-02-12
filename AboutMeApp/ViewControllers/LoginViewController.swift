@@ -12,18 +12,31 @@ final class LoginViewController: UIViewController {
     @IBOutlet private var userNameTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
     
+    var user = User.getUser()
+    
     private let currentLogin = "User"
     private let currentPassword = "Password"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userNameTextField.text = user.login
+        passwordTextField.text = user.password
 
-  
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let settingVC = segue.destination as? WelcomeViewController
-        settingVC?.username = userNameTextField.text
+        if let tabbarVC = segue.destination as? UITabBarController {
+            tabbarVC.viewControllers?.forEach { viewController in
+                if let welcomeVC = viewController as? WelcomeViewController {
+                    welcomeVC.user = user
+                } else if let navigationVC = viewController as? UINavigationController {
+                    if let userInfoVC = navigationVC.viewControllers.first as? UserInfoViewController {
+                        userInfoVC.user = user
+                    }
+                }
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -44,7 +57,6 @@ final class LoginViewController: UIViewController {
         return true
     }
 
-    
     @IBAction private func unwind(for segue: UIStoryboardSegue) {
         userNameTextField.text = ""
         passwordTextField.text = ""
@@ -55,7 +67,6 @@ final class LoginViewController: UIViewController {
         ? showAlert(withTitle: "Whoops", andMessage: "Your login is \(currentLogin)")
         : showAlert(withTitle: "Whoops", andMessage: "Your password is \(currentPassword)")
     }
-    
     
     private func showAlert(withTitle title: String, andMessage message: String, handler: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

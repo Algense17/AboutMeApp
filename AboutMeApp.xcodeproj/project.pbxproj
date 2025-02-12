@@ -16,6 +16,7 @@
 		FF8E3D4B2D590EFE007AB7DD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8E3D4A2D590EFE007AB7DD /* WelcomeViewController.swift */; };
 		FF8E3D6D2D5BC407007AB7DD /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8E3D6C2D5BC407007AB7DD /* UserInfoViewController.swift */; };
 		FFA0AF872D5CD09B00484B51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA0AF852D5CD09B00484B51 /* User.swift */; };
+		FFA0AF892D5CEDF200484B51 /* UserBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA0AF882D5CEDF200484B51 /* UserBioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FF8E3D6C2D5BC407007AB7DD /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		FFA0AF842D5CCFEE00484B51 /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = AboutMeApp.app; path = "/Users/vasiliy/Desktop/SwiftBookLessons/Part 2/Lesson 2.06/AboutMeApp/build/Debug-iphoneos/AboutMeApp.app"; sourceTree = "<absolute>"; };
 		FFA0AF852D5CD09B00484B51 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FFA0AF882D5CEDF200484B51 /* UserBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				FF8E3D412D590D37007AB7DD /* LoginViewController.swift */,
 				FF8E3D4A2D590EFE007AB7DD /* WelcomeViewController.swift */,
 				FF8E3D6C2D5BC407007AB7DD /* UserInfoViewController.swift */,
+				FFA0AF882D5CEDF200484B51 /* UserBioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				FFA0AF872D5CD09B00484B51 /* User.swift in Sources */,
 				FF8E3D442D590D37007AB7DD /* SceneDelegate.swift in Sources */,
 				FF8E3D452D590D37007AB7DD /* LoginViewController.swift in Sources */,
+				FFA0AF892D5CEDF200484B51 /* UserBioViewController.swift in Sources */,
 				FF8E3D6D2D5BC407007AB7DD /* UserInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
