@@ -10,7 +10,7 @@ struct User {
     var password = "Password"
     var person: Person
     
-    var userFullName {
+    var userFullName: String {
         "\(person.name) \(person.surname)"
     }
     
