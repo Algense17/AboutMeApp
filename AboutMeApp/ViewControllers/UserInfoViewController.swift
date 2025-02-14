@@ -25,7 +25,7 @@ final class UserInfoViewController: UIViewController {
         photoImage.layer.cornerRadius = photoImage.frame.height / 2
         photoImage.image = UIImage(named: user.person.photo)
         
-        self.navigationItem.title = user.getFullName
+        title = user.person.getFullName
         
         nameLabel.text = user.person.name
         surnameLabel.text = user.person.surname
@@ -36,9 +36,8 @@ final class UserInfoViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let settingVC = segue.destination as? UserBioViewController {
-            settingVC.user = user
-        }
+        let settingVC = segue.destination as? UserBioViewController
+        settingVC?.user = user
     }
 
 

@@ -6,13 +6,9 @@
 //
 
 struct User {
-    var login = "User"
-    var password = "Password"
-    var person: Person
-    
-    var getFullName: String {
-        "\(person.name) \(person.surname)"
-    }
+    let login: String
+    let password: String
+    let person: Person
     
     static func getUser() -> User {
         User(
@@ -25,12 +21,15 @@ struct User {
 }
 
 struct Person {
-    var name: String
-    var surname: String
-    var jobInfo: Job
-    var photo: String
-    var bio: String
+    let name: String
+    let surname: String
+    let jobInfo: Job
+    let photo: String
+    let bio: String
     
+    var getFullName: String {
+        "\(name) \(surname)"
+    }
     
     static func getPerson() -> Person{
         Person(
@@ -45,9 +44,9 @@ struct Person {
 }
 
 struct Job {
-    var company: String
-    var department: String
-    var position: String
+    let company: String
+    let department: String
+    let position: String
     
     static func getJob() -> Job {
         Job(

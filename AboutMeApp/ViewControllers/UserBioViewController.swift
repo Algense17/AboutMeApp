@@ -18,7 +18,7 @@ final class UserBioViewController: UIViewController {
         
         textVeiwLabel.backgroundColor = .clear
         textVeiwLabel.text = user.person.bio
-        title = "\(user.getFullName) Bio"
+        title = "\(user.person.getFullName) Bio"
 
     }
 

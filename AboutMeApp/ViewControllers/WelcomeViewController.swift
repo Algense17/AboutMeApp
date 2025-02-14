@@ -17,8 +17,8 @@ final class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         welcomeLabel.text = """
-                            Welcome \(user.login) !
-                            My name is \(user.getFullName)
-                            """
+            Welcome \(user.login) !
+            My name is \(user.person.getFullName)
+            """
     }
 }

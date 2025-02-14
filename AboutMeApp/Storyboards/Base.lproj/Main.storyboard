@@ -119,7 +119,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QKn-Qs-DaL"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="tO3-Fl-4nj" firstAttribute="centerX" secondItem="eSU-2y-LHK" secondAttribute="centerX" id="QqN-G0-VyT"/>
                             <constraint firstItem="tO3-Fl-4nj" firstAttribute="centerY" secondItem="eSU-2y-LHK" secondAttribute="centerY" id="Y3S-jH-EMi"/>
@@ -231,7 +231,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gkE-Xh-6fe"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="MSp-SS-FSh" firstAttribute="top" secondItem="pcb-Ff-wV5" secondAttribute="bottom" constant="30" id="Kx0-99-wia"/>
                             <constraint firstItem="pcb-Ff-wV5" firstAttribute="centerX" secondItem="9p0-2X-Q2p" secondAttribute="centerX" id="TSe-no-Jfk"/>
@@ -279,7 +279,7 @@
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KdI-0B-qgY"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="KdI-0B-qgY" firstAttribute="trailing" secondItem="10O-dE-kYa" secondAttribute="trailing" constant="30" id="BHW-V5-TAB"/>
                             <constraint firstItem="10O-dE-kYa" firstAttribute="top" secondItem="KdI-0B-qgY" secondAttribute="top" constant="20" id="PEk-rY-TGw"/>
@@ -350,8 +350,8 @@
         <systemColor name="systemGray2Color">
             <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

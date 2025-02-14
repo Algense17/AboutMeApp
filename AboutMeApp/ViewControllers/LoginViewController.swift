@@ -12,10 +12,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet private var userNameTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
     
-    var user = User.getUser()
-    
-    private let currentLogin = "User"
-    private let currentPassword = "Password"
+    private var user = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +37,12 @@ final class LoginViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTextField.text == currentLogin, passwordTextField.text == currentPassword else {
+        guard userNameTextField.text == user.login, passwordTextField.text == user.password else {
             showAlert(
                 withTitle: "invalid login or password",
                 andMessage: "Please, enter correct you login and password") {
@@ -64,8 +61,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotDataButtonsAction(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(withTitle: "Whoops", andMessage: "Your login is \(currentLogin)")
-        : showAlert(withTitle: "Whoops", andMessage: "Your password is \(currentPassword)")
+        ? showAlert(withTitle: "Whoops", andMessage: "Your login is \(user.login)")
+        : showAlert(withTitle: "Whoops", andMessage: "Your password is \(user.password)")
     }
     
     private func showAlert(withTitle title: String, andMessage message: String, handler: (() -> Void)? = nil) {
